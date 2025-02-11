@@ -25,5 +25,14 @@ class School:
 
 class PrimarySchool(School):
     def __init__(self, name, num_students, pickup_policy):
-        super().__init__(self, name, "Primary", num_students)
+        super().__init__(name, "Primary", num_students)
         self.pickup_policy = pickup_policy
+
+    # Getters
+    def get_pickup_policy(self):
+        return self.pickup_policy
+    
+    # __repr__ method
+    def __repr__(self):
+        return super().__repr__() + "\n" + f"Pickup Policy: {self.pickup_policy}"
+
