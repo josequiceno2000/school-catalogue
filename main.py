@@ -13,3 +13,7 @@ class School:
     
     def get_num_students(self):
         return self.num_students
+    
+    # Setter
+    def set_num_students(self, students):
+        self.num_students = students
