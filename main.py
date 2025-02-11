@@ -23,3 +23,7 @@ class School:
         return (f"{self.name} is for gifted {self.level} school students. We boast a student body of {self.num_students}!")
 
 
+class PrimarySchool(School):
+    def __init__(self, name, num_students, pickup_policy):
+        super().__init__(self, name, "Primary", num_students)
+        self.pickup_policy = pickup_policy
