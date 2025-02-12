@@ -36,3 +36,21 @@ class PrimarySchool(School):
     def __repr__(self):
         return super().__repr__() + "\n" + f"Pickup Policy: {self.pickup_policy}"
 
+
+class HighSchool(School):
+    def __init__(self, name, num_students, sports_teams):
+        super().__init__(name, "High", num_students)
+        self.sports_teams = sports_teams
+    
+    # Getters
+    def get_sports_teams(self):
+        return self.sports_teams
+
+    # __repr__ method
+    def __repr__(self):
+        repr_string = super().__repr__() + "\n" + "\nSports Teams:\n"
+        
+        for team in self.sports_teams:
+            repr_string += team + "\n"
+        return repr_string
+
